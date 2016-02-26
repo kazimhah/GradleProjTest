@@ -16,7 +16,7 @@ import javax.ws.rs.core.Response;
 
 //Sets the path to base URL + /
 
-//http://localhost:8080/RESTfulWebService/rest/hello/Zakeer
+//http://localhost:8080/RESTfulWebService/rest/hello/param
 
 @Path("/hello")
 public class Hello {
@@ -26,7 +26,7 @@ public class Hello {
   @Path("/{param}")
   public Response getMsg(@PathParam("param") String msg) {
  
-    String output = "Asad & Zakeer say Asalaam Alikum to  :Mr " + msg;
+    String output = "Welcome to my test webservice " + msg;
     return Response.status(200).entity(output).build(); 
   }
 } 
